@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library System Landing</title>
+    <link rel="stylesheet" href="/CSS/landing_styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<table class="nav" width="100%">
+        <tr>
+          <td><a href="#main">Home</a></td>
+          <td><a href="#features">Features</a></td>
+          <td><a href="#testimonials">Testimonials</a></td>
+          <td><a href="user_authentication.html">LOGIN</a></td>
+          <td><a href="profile_management.html">Profile</a></td>
+          <td><a href="dashboard.html">Dashboard</a></td>
+          <td><a href="#signup">Signup</a></td>
+        </tr>
+      </table>
+
+<!-- Home Section -->
+<table id="home" class="section" width="100%">
+    <tr><td align="center">
+        <h1>Welcome to Our Library System</h1>
+        <p>Your one-stop solution for library management.</p>
+        <input type="button" value="Discover More" onclick="scrollToSection('about')">
+    </td></tr>
+</table>
+
+<!-- Features Section -->
+<table id="features" class="section" width="100%">
+    <tr><td align="center">
+        <h2>Main Features</h2>
+        <ul>
+            <li>Book Search & Borrow</li>
+            <li>Reading History Tracking</li>
+            <li>Self Check-Out & Check-In</li>
+        </ul>
+        <input type="button" value="Join Now" onclick="scrollToSection('signup')">
+    </td></tr>
+</table>
+
+<!-- Testimonials Section -->
+<table id="testimonials" class="section" width="100%">
+    <tr><td align="center">
+        <h2>User Testimonials</h2>
+        <p>"This system made managing my books much easier!"</p>
+        <p>"Great for our school library – fast, effective, and easy to use!"</p>
+    </td></tr>
+</table>
+
+<!-- About Section -->
+<table id="about" class="section" width="100%">
+    <tr><td align="center">
+        <h2>About This System</h2>
+        <p>This system is developed to streamline library management for both patrons and staff.</p>
+        <p>It offers a variety of features to make book management easier, from search and borrow to check-out and return.</p>
+        <input type="button" value="Sign Up Today" onclick="scrollToSection('signup')">
+    </td></tr>
+</table>
+
+<!-- Signup Section -->
+<table id="signup" class="section" width="100%">
+    <tr><td align="center">
+        <h2>Sign Up for an Account</h2>
+        <p>Create your account and enjoy managing your library experience.</p>
+        
+        <!-- Signup Form -->
+        <form id="signupForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <td><label for="name">Full Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td><label for="confirmPassword">Confirm Password:</label></td>
+                    <td><input type="password" id="confirmPassword" name="confirmPassword" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob" required></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Register"></td>
+                    <td><input type="reset" value="Clear"></td>
+                </tr>
+            </table>
+        </form>
+
+        <p>Already have an account? <a href="#login">Login here</a></p>
+    </td></tr>
+</table>
+
+<script src="/JavaScript/landing_script.js"></script>
+
+</body>
+</html>
