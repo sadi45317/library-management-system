@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Export</title>
+    <link rel="stylesheet" href="/CSS/data_export_styles.css">
+</head>
+<body>
+
+<table align="center" cellpadding="10">
+    <tr>
+        <td colspan="2" align="center"><h2>Book Data Export</h2></td>
+    </tr>
+
+    <tr>
+        <td>Select Format:</td>
+        <td>
+            <input type="radio" name="format" value="pdf" checked> PDF
+            <input type="radio" name="format" value="csv"> CSV
+        </td>
+    </tr>
+
+    <tr>
+        <td>Select Books:</td>
+        <td>
+            <div id="bookList"></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <button onclick="exportData()">Download Selected Books</button>
+        </td>
+    </tr>
+
+    <tr>
+        <td colspan="2" align="center">
+            <div id="status"></div>
+        </td>
+    </tr>
+</table>
+
+<script src="/JavaScript/data_export_script.js"></script>
+</body>
+</html>

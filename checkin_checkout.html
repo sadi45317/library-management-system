@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check-in / Check-out</title>
+  <link rel="stylesheet" href="/CSS/circulation_styles.css">
+</head>
+<body>
+
+<h1>Library Circulation System</h1>
+
+<div class="tabs">
+  <button onclick="showTab('staff')">Circulation Desk</button>
+  <button onclick="showTab('kiosk')">Self-Service Kiosk</button>
+</div>
+
+<div id="staff" class="tab-content">
+  <h2>Staff Loan Processing</h2>
+  <form onsubmit="return processStaffLoan()">
+    <table>
+      <tr><td>Book Barcode:</td><td><input type="text" id="staffBook" required></td></tr>
+      <tr><td>Patron Card:</td><td><input type="text" id="staffCard" required></td></tr>
+      <tr><td></td><td><input type="submit" value="Confirm Loan"></td></tr>
+    </table>
+  </form>
+  <div id="staffResult"></div>
+</div>
+
+<div id="kiosk" class="tab-content hidden">
+  <h2>Self-Service Kiosk</h2>
+  <form onsubmit="return processKioskLoan()">
+    <table>
+      <tr><td>Library Card:</td><td><input type="text" id="kioskCard" required></td></tr>
+      <tr><td>RFID Book Code:</td><td><input type="text" id="rfidBook" required></td></tr>
+      <tr><td></td><td><input type="submit" value="Auto Checkout"></td></tr>
+    </table>
+  </form>
+  <div id="kioskResult"></div>
+</div>
+
+<h2>Current Loans</h2>
+<table border="1" id="loanTable">
+  <tr>
+    <th>Book</th>
+    <th>Card Number</th>
+    <th>Date</th>
+    <th>Action</th>
+  </tr>
+</table>
+
+<script src="/JavaScript/circulation_script.js"></script>
+</body>
+</html>
